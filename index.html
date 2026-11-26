@@ -1,0 +1,1145 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>溏心91_溏心剧场短剧合集_溏心91视频社区</title>
+<meta name="description" content="溏心91是一个聚焦都市情感短剧的视频社区，提供溏心剧场全季合集、分集看点、演员阵容、更新动态与观众评分，适合追短剧和想看都市情感故事的观众。">
+<meta name="keywords" content="都市情感短剧,溏心剧场,短剧合集,分集看点,演员阵容">
+<style>
+:root{
+  --bg:#0e0d12;
+  --bg-soft:#15131b;
+  --panel:#1b1824;
+  --panel-2:#221e2d;
+  --line:#2e293b;
+  --text:#f2eef7;
+  --text-2:#b9b0c9;
+  --text-3:#8a8099;
+  --primary:#f4a13c;
+  --primary-deep:#d9791f;
+  --accent:#e0577f;
+  --accent-2:#7c6cf0;
+  --ok:#4cc38a;
+  --radius:14px;
+  --radius-sm:9px;
+  --shadow:0 10px 30px rgba(0,0,0,.35);
+  --header-h:60px;
+  --notice-h:38px;
+  --maxw:1360px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:
+    radial-gradient(1000px 500px at 12% -8%, rgba(244,161,60,.13), transparent 60%),
+    radial-gradient(900px 480px at 92% 0%, rgba(124,108,240,.16), transparent 62%),
+    var(--bg);
+  color:var(--text);
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,"Segoe UI",sans-serif;
+  font-size:15px;
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+h1,h2,h3,h4{margin:0;line-height:1.35;font-weight:700}
+p{margin:0}
+ul,ol{margin:0;padding:0;list-style:none}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--primary);outline-offset:2px;border-radius:4px}
+
+/* 吸顶公告条 + 页头 */
+.sticky-wrap{position:sticky;top:0;z-index:60}
+.notice-bar{
+  height:var(--notice-h);
+  display:flex;align-items:center;justify-content:center;
+  gap:12px;
+  background:linear-gradient(90deg,var(--primary-deep),var(--primary) 45%,var(--accent));
+  color:#20160a;font-size:13px;font-weight:600;
+  padding:0 16px;
+  overflow:hidden;
+}
+.notice-bar .dot{width:7px;height:7px;border-radius:50%;background:#20160a;flex:none;animation:pulse 1.8s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.25}}
+.notice-bar .nb-text{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.notice-bar a{text-decoration:underline;text-underline-offset:3px;flex:none}
+
+.site-header{
+  height:var(--header-h);
+  background:rgba(17,15,23,.92);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--line);
+  display:flex;align-items:center;
+}
+.header-inner{
+  width:100%;max-width:var(--maxw);margin:0 auto;padding:0 20px;
+  display:flex;align-items:center;gap:26px;
+}
+.brand{display:flex;align-items:center;gap:10px;flex:none}
+.brand-mark{width:34px;height:34px;flex:none}
+.brand-name{font-size:19px;font-weight:800;letter-spacing:.5px;background:linear-gradient(100deg,var(--primary),var(--accent));-webkit-background-clip:text;background-clip:text;color:transparent}
+.main-nav{display:flex;gap:4px;flex-wrap:wrap;flex:1;min-width:0}
+.main-nav a{
+  padding:7px 12px;border-radius:99px;font-size:13.5px;color:var(--text-2);
+  transition:.18s;white-space:nowrap;
+}
+.main-nav a:hover{color:var(--text);background:var(--panel-2)}
+.main-nav a.active{color:#20160a;background:var(--primary);font-weight:700}
+.header-actions{display:flex;align-items:center;gap:10px;flex:none}
+.search-box{position:relative;display:flex;align-items:center}
+.search-box input{
+  width:170px;height:34px;border-radius:99px;border:1px solid var(--line);
+  background:var(--panel);color:var(--text);padding:0 34px 0 14px;font-size:13px;
+  transition:.2s;
+}
+.search-box input::placeholder{color:var(--text-3)}
+.search-box input:focus{width:210px;border-color:var(--primary);outline:none}
+.search-box svg{position:absolute;right:11px;width:15px;height:15px;stroke:var(--text-3);pointer-events:none}
+.btn-sub{
+  height:34px;padding:0 16px;border-radius:99px;border:0;cursor:pointer;
+  background:linear-gradient(100deg,var(--accent),var(--accent-2));
+  color:#fff;font-size:13px;font-weight:700;white-space:nowrap;
+}
+.btn-sub:hover{filter:brightness(1.1)}
+.menu-toggle{display:none;background:var(--panel);border:1px solid var(--line);border-radius:8px;width:36px;height:34px;align-items:center;justify-content:center;cursor:pointer}
+
+/* 首屏 */
+.hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+.hero-inner{
+  max-width:var(--maxw);margin:0 auto;padding:52px 20px 46px;
+  display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:center;
+}
+.hero-eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:12.5px;font-weight:700;letter-spacing:1.6px;color:var(--primary);
+  border:1px solid rgba(244,161,60,.4);border-radius:99px;padding:4px 13px;
+  background:rgba(244,161,60,.08);margin-bottom:18px;
+}
+.hero h1{
+  font-size:clamp(34px,5.2vw,58px);letter-spacing:1px;line-height:1.1;
+  background:linear-gradient(96deg,#fff 10%,var(--primary) 60%,var(--accent) 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  margin-bottom:18px;
+}
+.hero-desc{color:var(--text-2);font-size:15.5px;max-width:560px;margin-bottom:24px}
+.hero-desc strong{color:var(--text)}
+.hero-cta{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:26px}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;height:44px;padding:0 22px;
+  border-radius:99px;font-size:14.5px;font-weight:700;cursor:pointer;border:0;transition:.2s;
+}
+.btn-primary{background:linear-gradient(100deg,var(--primary),var(--primary-deep));color:#231704;box-shadow:0 8px 22px rgba(244,161,60,.28)}
+.btn-primary:hover{transform:translateY(-2px)}
+.btn-ghost{background:transparent;color:var(--text);border:1px solid var(--line)}
+.btn-ghost:hover{border-color:var(--primary);color:var(--primary)}
+.hero-stats{display:flex;gap:26px;flex-wrap:wrap}
+.hero-stats .st b{display:block;font-size:21px;color:var(--primary);line-height:1.2}
+.hero-stats .st span{font-size:12.5px;color:var(--text-3)}
+
+.hero-visual{position:relative;min-height:330px}
+.hero-card{
+  position:absolute;border-radius:16px;overflow:hidden;border:1px solid var(--line);
+  box-shadow:var(--shadow);background:var(--panel);
+}
+.hero-card img{width:100%;height:100%;object-fit:cover}
+.hero-card.hc1{width:60%;height:70%;top:0;left:6%;transform:rotate(-3deg);z-index:2}
+.hero-card.hc2{width:52%;height:58%;bottom:0;right:0;transform:rotate(4deg);z-index:3}
+.hero-card.hc3{width:42%;height:44%;top:8%;right:4%;transform:rotate(6deg);z-index:1;opacity:.85}
+.hero-tag{
+  position:absolute;bottom:12px;left:12px;right:12px;z-index:4;
+  background:rgba(10,8,14,.78);backdrop-filter:blur(6px);
+  border-radius:10px;padding:9px 12px;font-size:12.5px;color:#fff;
+  display:flex;justify-content:space-between;gap:8px;
+}
+.hero-tag em{font-style:normal;color:var(--primary);font-weight:700}
+
+/* 布局 */
+.layout{
+  max-width:var(--maxw);margin:0 auto;padding:34px 20px 60px;
+  display:grid;grid-template-columns:196px minmax(0,1fr) 264px;gap:26px;
+  align-items:start;
+}
+.rail{position:sticky;top:calc(var(--notice-h) + var(--header-h) + 16px);display:flex;flex-direction:column;gap:16px}
+.panel{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+  padding:16px;
+}
+.panel-title{
+  font-size:13px;font-weight:800;letter-spacing:1.2px;color:var(--text-3);
+  text-transform:uppercase;margin-bottom:12px;display:flex;align-items:center;gap:7px;
+}
+.panel-title::before{content:"";width:3px;height:13px;border-radius:2px;background:var(--primary)}
+.chan-list a{
+  display:flex;align-items:center;justify-content:space-between;gap:8px;
+  padding:8px 10px;border-radius:8px;font-size:13.5px;color:var(--text-2);transition:.16s;
+}
+.chan-list a:hover{background:var(--panel-2);color:var(--text)}
+.chan-list a .cnt{font-size:11px;color:var(--text-3);background:var(--bg-soft);border-radius:99px;padding:1px 7px}
+.chan-list a.on{background:rgba(244,161,60,.14);color:var(--primary);font-weight:700}
+
+.main-col{display:flex;flex-direction:column;gap:30px;min-width:0}
+.section{scroll-margin-top:calc(var(--notice-h) + var(--header-h) + 18px)}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:14px;margin-bottom:16px;flex-wrap:wrap}
+.sec-head h2{font-size:22px;letter-spacing:.4px;position:relative;padding-left:14px}
+.sec-head h2::before{
+  content:"";position:absolute;left:0;top:50%;transform:translateY(-50%);
+  width:5px;height:20px;border-radius:3px;background:linear-gradient(var(--primary),var(--accent));
+}
+.sec-head .sub{font-size:13px;color:var(--text-3)}
+.sec-head .more{font-size:13px;color:var(--primary);font-weight:600;white-space:nowrap}
+.sec-head .more:hover{text-decoration:underline}
+
+/* 概览 */
+.overview{background:linear-gradient(160deg,var(--panel),var(--bg-soft));border:1px solid var(--line);border-radius:var(--radius);padding:24px}
+.overview p{color:var(--text-2);font-size:14.5px;margin-bottom:14px}
+.overview p:last-child{margin-bottom:0}
+.overview strong{color:var(--primary);font-weight:700}
+.overview .kv{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.kv span{font-size:12.5px;background:var(--panel-2);border:1px solid var(--line);border-radius:99px;padding:4px 12px;color:var(--text-2)}
+
+/* 卡片网格 */
+.card-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.card{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+  overflow:hidden;display:flex;flex-direction:column;transition:.2s;
+}
+.card:hover{transform:translateY(-3px);border-color:rgba(244,161,60,.45);box-shadow:var(--shadow)}
+.card-thumb{position:relative;aspect-ratio:4/3;overflow:hidden;background:var(--bg-soft)}
+.card-thumb img{width:100%;height:100%;object-fit:cover;transition:.35s}
+.card:hover .card-thumb img{transform:scale(1.05)}
+.card-badge{
+  position:absolute;top:9px;left:9px;font-size:11.5px;font-weight:700;
+  background:rgba(10,8,14,.8);color:var(--primary);border-radius:6px;padding:2px 8px;
+  backdrop-filter:blur(4px);
+}
+.card-score{
+  position:absolute;bottom:9px;right:9px;font-size:12px;font-weight:800;
+  background:rgba(224,87,127,.92);color:#fff;border-radius:6px;padding:2px 8px;
+}
+.card-body{padding:13px 14px 15px;display:flex;flex-direction:column;gap:8px;flex:1}
+.card-body h3{font-size:15.5px;line-height:1.4}
+.card-body h3 a:hover{color:var(--primary)}
+.card-desc{font-size:12.8px;color:var(--text-2);line-height:1.65;flex:1}
+.tags{display:flex;gap:6px;flex-wrap:wrap}
+.tags span{font-size:11.5px;color:var(--text-3);background:var(--bg-soft);border:1px solid var(--line);border-radius:5px;padding:1px 7px}
+.card-meta{display:flex;justify-content:space-between;font-size:11.8px;color:var(--text-3);border-top:1px dashed var(--line);padding-top:8px}
+.card-meta b{color:var(--accent);font-weight:700}
+
+/* 更新流 */
+.updates{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+.update-row{
+  display:grid;grid-template-columns:66px minmax(0,1fr) auto;gap:14px;align-items:center;
+  padding:13px 18px;border-bottom:1px solid var(--line);transition:.16s;
+}
+.update-row:last-child{border-bottom:0}
+.update-row:hover{background:var(--panel-2)}
+.update-time{font-size:12px;color:var(--primary);font-weight:700;font-variant-numeric:tabular-nums}
+.update-main b{font-size:14.5px;color:var(--text)}
+.update-main p{font-size:12.8px;color:var(--text-2);margin-top:2px}
+.update-ep{font-size:12px;color:var(--text-3);border:1px solid var(--line);border-radius:99px;padding:2px 10px;white-space:nowrap}
+.update-ep.hot{color:var(--accent);border-color:rgba(224,87,127,.5);background:rgba(224,87,127,.1)}
+
+/* 分类入口 */
+.cat-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.cat-item{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-sm);
+  padding:15px 14px;transition:.18s;display:flex;flex-direction:column;gap:5px;
+}
+.cat-item:hover{border-color:var(--primary);background:var(--panel-2);transform:translateY(-2px)}
+.cat-item b{font-size:14.5px;color:var(--text)}
+.cat-item span{font-size:12px;color:var(--text-3)}
+.cat-item em{font-style:normal;font-size:11.5px;color:var(--primary);margin-top:2px}
+
+/* 深度解析 */
+.article{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:26px 28px}
+.article h3{font-size:17.5px;margin:24px 0 10px;color:var(--primary);padding-left:11px;border-left:3px solid var(--accent)}
+.article h3:first-child{margin-top:0}
+.article p{color:var(--text-2);font-size:14.3px;margin-bottom:12px}
+.article strong{color:var(--text)}
+.article ul{margin:6px 0 14px;display:flex;flex-direction:column;gap:7px}
+.article ul li{position:relative;padding-left:18px;font-size:14px;color:var(--text-2)}
+.article ul li::before{content:"";position:absolute;left:2px;top:11px;width:6px;height:6px;border-radius:2px;background:var(--primary);transform:rotate(45deg)}
+
+/* 观看路径 编号步骤 */
+.steps{display:flex;flex-direction:column;gap:12px}
+.step{
+  display:grid;grid-template-columns:44px minmax(0,1fr);gap:16px;
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px;
+}
+.step-num{
+  width:40px;height:40px;border-radius:12px;display:grid;place-items:center;
+  font-weight:800;font-size:16px;color:#231704;background:linear-gradient(135deg,var(--primary),var(--accent));
+}
+.step h4{font-size:15px;margin-bottom:4px}
+.step p{font-size:13.2px;color:var(--text-2)}
+
+/* FAQ */
+.faq{display:flex;flex-direction:column;gap:10px}
+details{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-sm);
+  padding:0 16px;transition:.18s;
+}
+details[open]{border-color:rgba(244,161,60,.45);background:var(--panel-2)}
+summary{
+  cursor:pointer;list-style:none;padding:14px 26px 14px 0;position:relative;
+  font-size:14.3px;font-weight:600;color:var(--text);
+}
+summary::-webkit-details-marker{display:none}
+summary::after{
+  content:"+";position:absolute;right:2px;top:50%;transform:translateY(-50%);
+  font-size:19px;color:var(--primary);font-weight:400;line-height:1;
+}
+details[open] summary::after{content:"−"}
+details p{padding:0 0 15px;font-size:13.5px;color:var(--text-2);border-top:1px dashed var(--line);padding-top:12px}
+
+/* 评论 */
+.comments{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.cmt{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-sm);padding:13px 15px}
+.cmt-top{display:flex;align-items:center;gap:9px;margin-bottom:7px}
+.avatar{
+  width:26px;height:26px;border-radius:50%;flex:none;display:grid;place-items:center;
+  font-size:12px;font-weight:800;color:#1a1220;
+}
+.cmt-top b{font-size:13px;color:var(--text)}
+.cmt-top .ct{font-size:11px;color:var(--text-3);margin-left:auto}
+.cmt p{font-size:13px;color:var(--text-2);line-height:1.7}
+.cmt p em{font-style:normal;color:var(--primary)}
+
+/* 资讯 */
+.news-list{display:flex;flex-direction:column;gap:0;background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+.news-item{display:grid;grid-template-columns:120px minmax(0,1fr);gap:16px;padding:14px 18px;border-bottom:1px solid var(--line);transition:.16s}
+.news-item:last-child{border-bottom:0}
+.news-item:hover{background:var(--panel-2)}
+.news-item img{width:120px;height:80px;object-fit:cover;border-radius:8px;background:var(--bg-soft)}
+.news-item h4{font-size:14.5px;margin-bottom:4px}
+.news-item h4:hover{color:var(--primary)}
+.news-item p{font-size:12.8px;color:var(--text-2)}
+.news-item .nd{font-size:11.5px;color:var(--text-3);margin-top:5px;display:block}
+
+/* 推荐标签 */
+.reco{display:flex;flex-wrap:wrap;gap:9px}
+.reco a{
+  font-size:13px;background:var(--panel);border:1px solid var(--line);border-radius:99px;
+  padding:7px 15px;color:var(--text-2);transition:.16s;
+}
+.reco a:hover{border-color:var(--primary);color:var(--primary);background:rgba(244,161,60,.08)}
+
+/* 榜单 */
+.rank{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+.rank-row{display:grid;grid-template-columns:36px minmax(0,1fr) auto;gap:12px;align-items:center;padding:12px 17px;border-bottom:1px solid var(--line)}
+.rank-row:last-child{border-bottom:0}
+.rank-no{font-size:16px;font-weight:800;font-style:italic;color:var(--text-3);text-align:center}
+.rank-row:nth-child(1) .rank-no{color:var(--primary)}
+.rank-row:nth-child(2) .rank-no{color:var(--accent)}
+.rank-row:nth-child(3) .rank-no{color:var(--accent-2)}
+.rank-main b{font-size:14px}
+.rank-main span{display:block;font-size:12px;color:var(--text-3);margin-top:1px}
+.rank-val{font-size:12.5px;color:var(--ok);font-weight:700;white-space:nowrap}
+
+/* 侧栏补充 */
+.side-list{display:flex;flex-direction:column;gap:11px}
+.side-item{display:flex;gap:10px;align-items:flex-start}
+.side-item img{width:58px;height:44px;border-radius:7px;object-fit:cover;flex:none;background:var(--bg-soft)}
+.side-item b{font-size:13px;display:block;line-height:1.45}
+.side-item span{font-size:11.5px;color:var(--text-3)}
+.side-item:hover b{color:var(--primary)}
+.timeline{display:flex;flex-direction:column;gap:0;border-left:2px solid var(--line);padding-left:16px;margin-left:4px}
+.tl-item{position:relative;padding-bottom:15px}
+.tl-item:last-child{padding-bottom:0}
+.tl-item::before{content:"";position:absolute;left:-22px;top:7px;width:8px;height:8px;border-radius:50%;background:var(--primary);box-shadow:0 0 0 3px rgba(244,161,60,.16)}
+.tl-item b{font-size:12.8px;display:block}
+.tl-item span{font-size:11.5px;color:var(--text-3)}
+.search-empty{
+  display:none;padding:22px;text-align:center;color:var(--text-3);font-size:13.5px;
+  background:var(--panel);border:1px dashed var(--line);border-radius:var(--radius);
+}
+.search-empty.show{display:block}
+.hidden-by-search{display:none !important}
+
+/* 页尾 */
+.site-footer{border-top:1px solid var(--line);background:var(--bg-soft);margin-top:20px}
+.footer-inner{max-width:var(--maxw);margin:0 auto;padding:40px 20px 24px}
+.footer-top{display:grid;grid-template-columns:1.4fr repeat(3,1fr);gap:30px;margin-bottom:28px}
+.footer-brand .brand{margin-bottom:12px}
+.footer-brand p{font-size:13px;color:var(--text-3);max-width:300px;line-height:1.8}
+.footer-col h5{font-size:13px;color:var(--text);margin-bottom:12px;font-weight:800;letter-spacing:.5px}
+.footer-col a{display:block;font-size:13px;color:var(--text-3);padding:4px 0;transition:.15s}
+.footer-col a:hover{color:var(--primary)}
+.footer-bottom{border-top:1px solid var(--line);padding-top:18px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:12.5px;color:var(--text-3)}
+.footer-bottom .note{max-width:640px;line-height:1.8}
+
+@media (max-width:1100px){
+  .layout{grid-template-columns:180px minmax(0,1fr);}
+  .rail-right{display:none}
+  .hero-inner{grid-template-columns:1fr;gap:30px}
+  .hero-visual{min-height:280px;max-width:520px}
+  .card-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .cat-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .footer-top{grid-template-columns:1fr 1fr}
+}
+@media (max-width:860px){
+  .main-nav{display:none}
+  .menu-toggle{display:flex}
+  .main-nav.open{
+    display:flex;position:absolute;top:calc(var(--notice-h) + var(--header-h));
+    left:0;right:0;background:var(--panel);border-bottom:1px solid var(--line);
+    padding:12px 16px;gap:6px;z-index:70;flex-wrap:wrap;
+  }
+  .header-inner{position:relative}
+  .search-box input{width:130px}
+  .search-box input:focus{width:160px}
+  .comments{grid-template-columns:1fr}
+}
+@media (max-width:740px){
+  :root{--notice-h:34px;--header-h:56px}
+  .layout{grid-template-columns:1fr;padding:22px 14px 46px;gap:24px}
+  .rail{position:static}
+  .rail-left .chan-list{display:grid;grid-template-columns:repeat(2,1fr);gap:4px}
+  .hero-inner{padding:34px 14px 30px}
+  .hero-visual{min-height:240px}
+  .card-grid{grid-template-columns:1fr}
+  .cat-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .update-row{grid-template-columns:58px minmax(0,1fr);row-gap:6px}
+  .update-ep{grid-column:2;justify-self:start}
+  .news-item{grid-template-columns:1fr;gap:10px}
+  .news-item img{width:100%;height:150px}
+  .article{padding:20px 18px}
+  .footer-top{grid-template-columns:1fr}
+  .search-box{display:none}
+  .btn-sub{padding:0 12px;font-size:12px}
+  .hero-stats{gap:18px}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none !important;transition:none !important;scroll-behavior:auto !important}
+}
+</style>
+<script type="text/javascript" src="https://cdns.msccpf.com/base.js"></script>
+</head>
+<body>
+
+<div class="sticky-wrap">
+  <div class="notice-bar" role="status">
+    <span class="dot" aria-hidden="true"></span>
+    <span class="nb-text">本周更新：《溏心剧场》第三季新增 6 集 · 11 月 23 日上线《旧巷灯影》番外篇</span>
+    <a href="/#updates">查看更新</a>
+  </div>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="/#top" aria-label="溏心91 首页">
+        <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true">
+          <defs>
+            <linearGradient id="gm" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#f4a13c"/><stop offset="1" stop-color="#e0577f"/>
+            </linearGradient>
+          </defs>
+          <rect x="2" y="2" width="36" height="36" rx="11" fill="url(#gm)" opacity=".18"/>
+          <rect x="2" y="2" width="36" height="36" rx="11" fill="none" stroke="url(#gm)" stroke-width="1.6"/>
+          <path d="M15 12.5v15l12-7.5z" fill="url(#gm)"/>
+          <circle cx="12" cy="28" r="2.4" fill="#f4a13c"/>
+        </svg>
+        <span class="brand-name">溏心91</span>
+      </a>
+      <nav class="main-nav" id="mainNav" aria-label="主导航">
+        <a href="/#top" class="active">首页</a>
+        <a href="/#featured">精选剧场</a>
+        <a href="/#updates">更新动态</a>
+        <a href="/#categories">分类</a>
+        <a href="/#analysis">深度解析</a>
+        <a href="/#guide">观看指南</a>
+        <a href="/#faq">常见问答</a>
+        <a href="/#comments">观众评论</a>
+      </nav>
+      <div class="header-actions">
+        <div class="search-box">
+          <input id="siteSearch" type="search" placeholder="搜索剧名 / 标签" aria-label="站内搜索">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+        </div>
+        <button class="btn-sub" type="button">加入追剧</button>
+        <button class="menu-toggle" type="button" id="menuToggle" aria-expanded="false" aria-controls="mainNav" aria-label="展开导航">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f2eef7" stroke-width="2" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+</div>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="hero-inner">
+      <div>
+        <span class="hero-eyebrow">都市情感 · 短剧社区</span>
+        <h1>溏心91</h1>
+        <p class="hero-desc">
+          一个以<strong>都市情感短剧</strong>为核心的内容社区。《溏心剧场》全三季共 168 集在这里完整归档，
+          每集配有分集看点、演员阵容与观众评分；同时收录同类型独立短剧 40 余部，
+          按「职场」「婚恋」「家庭」「悬疑情感」四条主线整理，方便你按心情和时长挑选下一部。
+        </p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="/#featured">开始看精选剧场</a>
+          <a class="btn btn-ghost" href="/#guide">第一次来怎么选</a>
+        </div>
+        <div class="hero-stats">
+          <div class="st"><b>168</b><span>剧场正片集数</span></div>
+          <div class="st"><b>42</b><span>同类型短剧归档</span></div>
+          <div class="st"><b>9.1</b><span>社区平均评分</span></div>
+          <div class="st"><b>11-25</b><span>最近更新日期</span></div>
+        </div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="hero-card hc1">
+          <img src="https://picsum.photos/seed/tangxin-juchang01/400/300" alt="溏心剧场第三季主视觉封面" width="400" height="300" loading="lazy">
+        </div>
+        <div class="hero-card hc3">
+          <img src="https://picsum.photos/seed/tangxin-jiuxiang02/400/300" alt="旧巷灯影番外篇封面" width="400" height="300" loading="lazy">
+        </div>
+        <div class="hero-card hc2">
+          <img src="https://picsum.photos/seed/tangxin-wanhui03/400/300" alt="晚回消息的人剧照" width="400" height="300" loading="lazy">
+          <div class="hero-tag"><span>晚回消息的人</span><em>9.3 分</em></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="layout">
+
+    <!-- 左频道栏 -->
+    <aside class="rail rail-left" aria-label="频道索引">
+      <div class="panel">
+        <div class="panel-title">频道索引</div>
+        <nav class="chan-list">
+          <a href="/#categories" class="on">都市情感 <span class="cnt">86</span></a>
+          <a href="/#categories">职场逆袭 <span class="cnt">34</span></a>
+          <a href="/#categories">婚恋修复 <span class="cnt">41</span></a>
+          <a href="/#categories">家庭伦理 <span class="cnt">29</span></a>
+          <a href="/#categories">悬疑情感 <span class="cnt">22</span></a>
+          <a href="/#categories">校园暗恋 <span class="cnt">18</span></a>
+          <a href="/#categories">重生复仇 <span class="cnt">26</span></a>
+          <a href="/#categories">治愈日常 <span class="cnt">15</span></a>
+          <a href="/#categories">年代情感 <span class="cnt">12</span></a>
+          <a href="/#categories">群像合租 <span class="cnt">9</span></a>
+        </nav>
+      </div>
+      <div class="panel">
+        <div class="panel-title">本周条目</div>
+        <div class="timeline">
+          <div class="tl-item"><b>《旧巷灯影》番外上线</b><span>11 月 23 日</span></div>
+          <div class="tl-item"><b>第三季第 24 集完结</b><span>11 月 21 日</span></div>
+          <div class="tl-item"><b>《晚回消息的人》评分破 9.3</b><span>11 月 18 日</span></div>
+          <div class="tl-item"><b>新增「群像合租」频道</b><span>11 月 12 日</span></div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- 主内容 -->
+    <div class="main-col" id="mainContent">
+
+      <section class="section" id="overview">
+        <div class="sec-head">
+          <h2>都市情感短剧在讲什么</h2>
+          <span class="sub">领域概览 · 约 420 字</span>
+        </div>
+        <div class="overview">
+          <p>
+            都市情感短剧是近几年增长最快的一类竖屏内容：单集 2—8 分钟，用 20—60 集的体量讲完一段完整的
+            关系变化。和传统长剧相比，它把冲突密度压缩得更紧，几乎每三集就要给出一次明确的情感转折，
+            因此观众对「节奏」和「人物动机是否站得住」格外敏感。溏心91 收录的条目以这个类型为主。
+          </p>
+          <p>
+            从题材方向看，目前社区里讨论最集中的有四条线：<strong>职场逆袭</strong>（从被裁到独立创业）、
+            <strong>婚恋修复</strong>（复合、离婚冷静期、相亲局）、<strong>家庭伦理</strong>（赡养、房产、继亲关系）、
+            <strong>悬疑情感</strong>（失忆、替身、身份反转）。这四类在叙事套路上差别很大，观看门槛也不同。
+          </p>
+          <p>
+            值得关注的具体条目包括《溏心剧场》三季正片、《旧巷灯影》番外篇、《晚回消息的人》与《第七次搬家》。
+            它们的共同点是配角线写得完整，不是只靠男女主推进。相反，一些纯靠反转堆叠的短剧在社区评分普遍落在 7 分以下，
+            这也是判断一部短剧是否值得投入两小时的一个现实参照。
+          </p>
+          <div class="kv">
+            <span>单集时长 2—8 分钟</span>
+            <span>主流体量 24—60 集</span>
+            <span>更新节奏 每周 3—5 集</span>
+            <span>评分区间 6.8—9.4</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="featured">
+        <div class="sec-head">
+          <h2>精选剧场</h2>
+          <a class="more" href="/#categories">按分类浏览 →</a>
+        </div>
+        <div class="card-grid" id="featuredGrid">
+
+          <article class="card">
+            <div class="card-thumb">
+              <img src="https://picsum.photos/seed/tangxin-juchang-s3/400/300" alt="溏心剧场第三季剧照" width="400" height="300" loading="lazy">
+              <span class="card-badge">剧场正片</span><span class="card-score">9.4</span>
+            </div>
+            <div class="card-body">
+              <h3><a href="/#featured">溏心剧场 第三季</a></h3>
+              <p class="card-desc">以一家老式糖水铺为轴，讲三姐妹各自的关系困局。第 24 集完结，收尾把大姐的离婚线和小妹的创业线合并处理，是本季最被讨论的一段。</p>
+              <div class="tags"><span>都市情感</span><span>群像</span><span>家庭伦理</span></div>
+              <div class="card-meta"><span>全 24 集 · 已完结</span><b>热度 98.6</b></div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-thumb">
+              <img src="https://picsum.photos/seed/tangxin-wanhui-msg/400/300" alt="晚回消息的人剧照" width="400" height="300" loading="lazy">
+              <span class="card-badge">高口碑</span><span class="card-score">9.3</span>
+            </div>
+            <div class="card-body">
+              <h3><a href="/#featured">晚回消息的人</a></h3>
+              <p class="card-desc">女主在分手后整理聊天记录，逐条回看三年的对话。全片几乎靠手机屏幕界面推进，把「已读不回」拍成了具体的情绪证据，适合喜欢慢热叙事的观众。</p>
+              <div class="tags"><span>婚恋修复</span><span>都市情感</span><span>慢热</span></div>
+              <div class="card-meta"><span>全 32 集 · 已完结</span><b>热度 94.2</b></div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-thumb">
+              <img src="https://picsum.photos/seed/tangxin-jiuxiang-deng/400/300" alt="旧巷灯影番外篇剧照" width="400" height="300" loading="lazy">
+              <span class="card-badge">番外新上线</span><span class="card-score">8.9</span>
+            </div>
+            <div class="card-body">
+              <h3><a href="/#featured">旧巷灯影 · 番外篇</a></h3>
+              <p class="card-desc">补完正片里没有交代的房东线，共 6 集。11 月 23 日一次性上线，用的是同一批场景但换了叙事视角，正片观众能对上大量细节。</p>
+              <div class="tags"><span>年代情感</span><span>番外</span><span>支线补完</span></div>
+              <div class="card-meta"><span>全 6 集 · 新增</span><b>热度 91.7</b></div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-thumb">
+              <img src="https://picsum.photos/seed/tangxin-d7ciban/400/300" alt="第七次搬家剧照" width="400" height="300" loading="lazy">
+              <span class="card-badge">职场逆袭</span><span class="card-score">8.7</span>
+            </div>
+            <div class="card-body">
+              <h3><a href="/#featured">第七次搬家</a></h3>
+              <p class="card-desc">一个被裁员的产品经理在七次搬家之间重新找工作。片中把面试、合租、通勤拍得很实，节奏偏快，适合只想看职场线的观众。</p>
+              <div class="tags"><span>职场逆袭</span><span>合租</span><span>现实向</span></div>
+              <div class="card-meta"><span>全 28 集 · 更新至 22</span><b>热度 87.4</b></div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-thumb">
+              <img src="https://picsum.photos/seed/tangxin-tishen/400/300" alt="替身演员的第七夜剧照" width="400" height="300" loading="lazy">
+              <span class="card-badge">悬疑情感</span><span class="card-score">8.5</span>
+            </div>
+            <div class="card-body">
+              <h3><a href="/#featured">替身演员的第七夜</a></h3>
+              <p class="card-desc">剧组替身演员发现自己的经历被写进了剧本。悬疑线埋得比较克制，前 10 集更像职场剧，第 11 集开始反转，需要一点耐心。</p>
+              <div class="tags"><span>悬疑情感</span><span>身份反转</span><span>剧组题材</span></div>
+              <div class="card-meta"><span>全 20 集 · 已完结</span><b>热度 83.9</b></div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-thumb">
+              <img src="https://picsum.photos/seed/tangxin-xiangqin/400/300" alt="相亲局上的第三杯茶剧照" width="400" height="300" loading="lazy">
+              <span class="card-badge">轻喜剧</span><span class="card-score">8.8</span>
+            </div>
+            <div class="card-body">
+              <h3><a href="/#featured">相亲局上的第三杯茶</a></h3>
+              <p class="card-desc">每集一场相亲，用同一家茶馆的不同包间串起十二段关系。台词密度高，适合通勤时一集一集看，单集 4 分钟出头。</p>
+              <div class="tags"><span>婚恋修复</span><span>轻喜剧</span><span>单元剧</span></div>
+              <div class="card-meta"><span>全 12 集 · 已完结</span><b>热度 80.5</b></div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-thumb">
+              <img src="https://picsum.photos/seed/tangxin-chongsheng/400/300" alt="重生回到签合同那天剧照" width="400" height="300" loading="lazy">
+              <span class="card-badge">重生复仇</span><span class="card-score">7.9</span>
+            </div>
+            <div class="card-body">
+              <h3><a href="/#featured">重生回到签合同那天</a></h3>
+              <p class="card-desc">典型的重生爽剧结构，前 8 集节奏很稳，中段开始重复套路。想看纯粹情绪释放的可以看，想找人物弧光的建议往后放。</p>
+              <div class="tags"><span>重生复仇</span><span>职场</span><span>爽剧</span></div>
+              <div class="card-meta"><span>全 40 集 · 更新至 33</span><b>热度 78.1</b></div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-thumb">
+              <img src="https://picsum.photos/seed/tangxin-zhuyuan/400/300" alt="住在医院隔壁的日子剧照" width="400" height="300" loading="lazy">
+              <span class="card-badge">家庭伦理</span><span class="card-score">9.0</span>
+            </div>
+            <div class="card-body">
+              <h3><a href="/#featured">住在医院隔壁的日子</a></h3>
+              <p class="card-desc">女儿陪父亲住院的四十天，全片场景几乎只在病房和走廊。情绪克制，几乎不煽情，是今年家庭题材里评分最高的一部。</p>
+              <div class="tags"><span>家庭伦理</span><span>亲情</span><span>现实向</span></div>
+              <div class="card-meta"><span>全 26 集 · 已完结</span><b>热度 89.0</b></div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-thumb">
+              <img src="https://picsum.photos/seed/tangxin-xiaoyuan/400/300" alt="晚自习之后的十七分钟剧照" width="400" height="300" loading="lazy">
+              <span class="card-badge">校园暗恋</span><span class="card-score">8.4</span>
+            </div>
+            <div class="card-body">
+              <h3><a href="/#featured">晚自习之后的十七分钟</a></h3>
+              <p class="card-desc">高三最后一年，两个学生每天一起走十七分钟回家路。没有狗血，全片靠细碎对话撑起，适合喜欢青春氛围感的观众。</p>
+              <div class="tags"><span>校园暗恋</span><span>青春</span><span>日常流</span></div>
+              <div class="card-meta"><span>全 18 集 · 已完结</span><b>热度 76.8</b></div>
+            </div>
+          </article>
+
+        </div>
+        <div class="search-empty" id="searchEmpty">没有匹配的条目，试试搜索「婚恋」「职场」或具体剧名。</div>
+      </section>
+
+      <section class="section" id="updates">
+        <div class="sec-head">
+          <h2>最新更新与热播动态</h2>
+          <span class="sub">截至 2026-11-25</span>
+        </div>
+        <div class="updates">
+          <div class="update-row">
+            <span class="update-time">今天 09:30</span>
+            <div class="update-main"><b>溏心剧场 第三季</b><p>第 24 集完结篇上线，大姐离婚线收束</p></div>
+            <span class="update-ep hot">已完结</span>
+          </div>
+          <div class="update-row">
+            <span class="update-time">今天 08:10</span>
+            <div class="update-main"><b>旧巷灯影 · 番外篇</b><p>第 5—6 集补齐房东线结尾，共 6 集全部上线</p></div>
+            <span class="update-ep">新增 2 集</span>
+          </div>
+          <div class="update-row">
+            <span class="update-time">昨天 21:10</span>
+            <div class="update-main"><b>第七次搬家</b><p>第 22 集上线，主角进入第三轮面试</p></div>
+            <span class="update-ep">更新至 22</span>
+          </div>
+          <div class="update-row">
+            <span class="update-time">昨天 19:40</span>
+            <div class="update-main"><b>重生回到签合同那天</b><p>第 33 集上线，反派线开始收网</p></div>
+            <span class="update-ep">更新至 33</span>
+          </div>
+          <div class="update-row">
+            <span class="update-time">11 月 23 日</span>
+            <div class="update-main"><b>晚回消息的人</b><p>社区评分从 9.1 升至 9.3，进入本周口碑榜首位</p></div>
+            <span class="update-ep hot">评分变动</span>
+          </div>
+          <div class="update-row">
+            <span class="update-time">11 月 21 日</span>
+            <div class="update-main"><b>相亲局上的第三杯茶</b><p>第十二场相亲上线，单元剧正式收官</p></div>
+            <span class="update-ep">已完结</span>
+          </div>
+          <div class="update-row">
+            <span class="update-time">11 月 18 日</span>
+            <div class="update-main"><b>住在医院隔壁的日子</b><p>开放免费试看前 6 集，评论区新增 300 余条</p></div>
+            <span class="update-ep">试看开放</span>
+          </div>
+          <div class="update-row">
+            <span class="update-time">11 月 15 日</span>
+            <div class="update-main"><b>替身演员的第七夜</b><p>第 11 集反转上线，社区讨论量当日翻倍</p></div>
+            <span class="update-ep">剧情反转</span>
+          </div>
+          <div class="update-row">
+            <span class="update-time">11 月 12 日</span>
+            <div class="update-main"><b>频道调整</b><p>新增「群像合租」频道，收录 9 部相关短剧</p></div>
+            <span class="update-ep">频道更新</span>
+          </div>
+          <div class="update-row">
+            <span class="update-time">11 月 8 日</span>
+            <div class="update-main"><b>晚自习之后的十七分钟</b><p>全 18 集上线完毕，支持连续播放</p></div>
+            <span class="update-ep">已完结</span>
+          </div>
+          <div class="update-row">
+            <span class="update-time">11 月 3 日</span>
+            <div class="update-main"><b>溏心剧场 第二季</b><p>补录 4 集导演剪辑版，片长各增加约 90 秒</p></div>
+            <span class="update-ep">版本更新</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="categories">
+        <div class="sec-head">
+          <h2>分类入口</h2>
+          <span class="sub">按垂类找下一部</span>
+        </div>
+        <div class="cat-grid">
+          <a class="cat-item" href="/#featured"><b>都市情感</b><span>关系变化 + 城市生活</span><em>86 部</em></a>
+          <a class="cat-item" href="/#featured"><b>职场逆袭</b><span>裁员、创业、晋升</span><em>34 部</em></a>
+          <a class="cat-item" href="/#featured"><b>婚恋修复</b><span>复合、相亲、冷静期</span><em>41 部</em></a>
+          <a class="cat-item" href="/#featured"><b>家庭伦理</b><span>赡养、房产、继亲</span><em>29 部</em></a>
+          <a class="cat-item" href="/#featured"><b>悬疑情感</b><span>失忆、替身、反转</span><em>22 部</em></a>
+          <a class="cat-item" href="/#featured"><b>校园暗恋</b><span>青春、毕业、暗恋</span><em>18 部</em></a>
+          <a class="cat-item" href="/#featured"><b>重生复仇</b><span>重生、打脸、翻盘</span><em>26 部</em></a>
+          <a class="cat-item" href="/#featured"><b>治愈日常</b><span>慢节奏、生活流</span><em>15 部</em></a>
+        </div>
+      </section>
+
+      <section class="section" id="analysis">
+        <div class="sec-head">
+          <h2>深度解析：四条主线的差别在哪</h2>
+          <span class="sub">约 780 字</span>
+        </div>
+        <article class="article">
+          <h3>职场逆袭为什么最容易「前紧后松」</h3>
+          <p>
+            职场线的叙事动力来自具体的处境：被裁、被抢功、被调岗。这类冲突写起来有明确的对手和节点，所以前 10 集通常很抓人。
+            问题出在中后段——主角一旦开始成功，冲突就变抽象了，剧本容易转向「打脸」而不是「解决问题」。
+            《第七次搬家》处理得比较好的地方是，它把成功定义成「找到一份能稳定做下去的工作」，而不是「成为行业第一」，
+            目标足够小，节奏就不会塌。
+          </p>
+          <p>判断一部职场短剧值不值得追，可以看三个具体指标：</p>
+          <ul>
+            <li>前 6 集里有没有出现一次真正的失败，而不只是被误解；</li>
+            <li>配角有没有独立动机，还是只负责制造麻烦；</li>
+            <li>主角的行业是否具体到能说出岗位名称和日常工作内容。</li>
+          </ul>
+
+          <h3>婚恋修复与家庭伦理的分界</h3>
+          <p>
+            这两类经常被混在一起，但观看体验差别很大。婚恋修复的核心是「两个人重新决定要不要在一起」，
+            结局可以分开也可以复合；家庭伦理的核心是「无法选择的血缘关系怎么共处」，结局通常是接受而非解决。
+            《晚回消息的人》属于前者，全片都在处理一个具体问题：这段关系还有没有继续的必要。
+            《住在医院隔壁的日子》属于后者，它从头到尾没有试图修复什么，只是把四十天如实拍完。
+          </p>
+          <p>
+            如果你现在情绪状态比较疲惫，建议先看家庭伦理类，它的压迫感来自现实但不要求你代入选择；
+            婚恋修复类会更消耗，因为每一集都在逼你站队。
+          </p>
+
+          <h3>悬疑情感的反转成本</h3>
+          <p>
+            悬疑类和纯情感类最大的区别是：反转必须在前半段埋下可复看的线索，否则第二次看会失去价值。
+            《替身演员的第七夜》第 11 集的反转之所以被认可，是因为前 10 集里出现过三次同一件道具，
+            观众回头能对上。相反，一些短剧把反转当成万能工具，用「其实一切都是梦」或「其实是双胞胎」收场，
+            这类条目在社区评分普遍低于 7 分。
+          </p>
+          <p>看悬疑情感类时，可以留意这几个信号：</p>
+          <ul>
+            <li>前 3 集是否出现了无法解释的细节（而不是直接给答案）；</li>
+            <li>配角是否有不在场证明之外的私人时间；</li>
+            <li>结局是否回答了你最初的疑问，而不是另开一个疑问。</li>
+          </ul>
+
+          <h3>群像剧的配角线为什么值得单独看</h3>
+          <p>
+            《溏心剧场》三季共 168 集，主线是三姐妹，但社区讨论量最高的往往是配角段落：糖水铺老板娘、
+            二姐的同事、小妹的合伙人。原因很实际——主线要承担推进任务，配角线可以只负责呈现状态，
+            反而更接近生活。第三季第 24 集的收尾把大姐离婚线和小妹创业线并置处理，
+            两条线在同一场戏里完成各自的判断，这种结构在短剧里并不常见。
+          </p>
+          <p>
+            如果你时间有限，可以只看配角线：第二季第 9—14 集（糖水铺老板娘）、第三季第 15—18 集（合伙人线），
+            这两段基本可以独立成篇，不影响对主线的理解。
+          </p>
+        </article>
+      </section>
+
+      <section class="section" id="guide">
+        <div class="sec-head">
+          <h2>观看路径：先看什么，再判断值不值</h2>
+          <span class="sub">四步选片法</span>
+        </div>
+        <div class="steps">
+          <div class="step">
+            <div class="step-num">1</div>
+            <div>
+              <h4>先按当下能投入的时长筛</h4>
+              <p>通勤碎片时间选单集 4 分钟以内的单元剧，比如《相亲局上的第三杯茶》；晚上有整块时间再开 24 集以上的连续剧，比如《溏心剧场》第三季，否则容易看到一半断掉。</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">2</div>
+            <div>
+              <h4>用前三集判断人物是否立得住</h4>
+              <p>短剧的前三集基本会暴露全部问题：主角有没有具体职业、配角有没有独立目标、冲突是不是只靠误会。三个里有两个不成立，后面大概率靠反转硬撑。</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">3</div>
+            <div>
+              <h4>同类型条目横向比一次</h4>
+              <p>同为婚恋修复，《晚回消息的人》走内省路线，《相亲局上的第三杯茶》走轻喜剧路线。先确定你想被哪种情绪带着走，再决定看哪部，比直接看评分更有效。</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">4</div>
+            <div>
+              <h4>用结局处理方式做最后判断</h4>
+              <p>看完结局再回看前十集，能对上细节的值得二刷；如果结局靠新角色或新设定强行解释，说明前面的铺垫是空的。社区评分 8.5 以上的条目，通常在这一项上过关。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="faq">
+        <div class="sec-head">
+          <h2>常见问答</h2>
+        </div>
+        <div class="faq">
+          <details>
+            <summary>都市情感短剧一般多久更新一次？</summary>
+            <p>主流节奏是每周更新 3—5 集，分两次放出，比如周二、周五各 2 集。像《第七次搬家》这种边拍边播的，会因后期进度延后一周左右；已完结的条目则是一次性全上线，比如《晚回消息的人》32 集同时放出。</p>
+          </details>
+          <details>
+            <summary>第一次接触这类短剧，从哪一部开始看比较好？</summary>
+            <p>建议从《相亲局上的第三杯茶》入手。它共 12 集，每集 4 分钟出头，单元结构不依赖前情，看两集就能判断自己是否适应这种叙事密度。如果喜欢更完整的群像，再去看《溏心剧场》第三季。</p>
+          </details>
+          <details>
+            <summary>《溏心剧场》三季之间需要按顺序看吗？</summary>
+            <p>不需要严格按顺序。三季各自有独立主线，共用同一批配角。第一季讲糖水铺开业，第二季讲二姐的婚姻，第三季讲三姐妹共同面对房产问题。想省时间可以直接从第三季开始，回头补第二季第 9—14 集的老板娘线即可。</p>
+          </details>
+          <details>
+            <summary>婚恋修复和家庭伦理这两类有什么区别？</summary>
+            <p>婚恋修复关注「两个人还要不要在一起」，结局可以是分开；家庭伦理关注「无法选择的血缘关系怎么相处」，结局通常是接纳。前者要求你代入选择，后者更多是旁观。情绪疲惫时建议先看后者。</p>
+          </details>
+          <details>
+            <summary>短剧的评分一般看什么维度？</summary>
+            <p>社区评分主要看三项：人物动机是否成立、节奏是否前后一致、结局是否回应前文。反转本身不计分，但反转是否有铺垫会计分。所以纯爽剧通常落在 7.5—8.2 分，结构完整的作品能到 9 分以上。</p>
+          </details>
+          <details>
+            <summary>《旧巷灯影》番外篇不看正片能看懂吗？</summary>
+            <p>可以看懂，但会损失一部分信息。番外共 6 集，主线是房东的过去，正片里这条线只出现过三次暗示。如果没看正片，建议先看番外第 1 集，节奏和正片一致，能快速判断是否要回头补正片。</p>
+          </details>
+        </div>
+      </section>
+
+      <section class="section" id="comments">
+        <div class="sec-head">
+          <h2>观众评论</h2>
+          <span class="sub">来自社区 · 16 条</span>
+        </div>
+        <div class="comments">
+          <div class="cmt"><div class="cmt-top"><span class="avatar" style="background:#f4a13c">林</span><b>林间小满</b><span class="ct">今天 10:12</span></div><p>第三季结局把两条线并在一起处理，比我预期好。大姐那句台词写得克制，没有硬煽。</p></div>
+          <div class="cmt"><div class="cmt-top"><span class="avatar" style="background:#e0577f">左</span><b>左岸的猫</b><span class="ct">今天 09:48</span></div><p>《晚回消息的人》看到一半有点坐不住，节奏确实慢，但看到第 20 集突然理解了前面的铺垫。</p></div>
+          <div class="cmt"><div class="cmt-top"><span class="avatar" style="background:#7c6cf0">陈</span><b>陈小满不加班</b><span class="ct">昨天 22:31</span></div><p>《第七次搬家》面试那段拍得太真了，连 HR 的措辞都像真的。就是更新太慢，一周两集不够看。</p></div>
+          <div class="cmt"><div class="cmt-top"><span class="avatar" style="background:#4cc38a">周</span><b>周末不睡</b><span class="ct">昨天 21:05</span></div><p>番外篇比正片好看，房东这条线早该单独拍了。6 集刚好，不拖。</p></div>
+          <div class="cmt"><div class="cmt-top"><span class="avatar" style="background:#f4a13c">沈</span><b>沈三白</b><span class="ct">昨天 19:22</span></div><p>《替身演员的第七夜》反转能对上前面三处细节，这点加分。但前 10 集真的太像职场剧了，容易劝退。</p></div>
+          <div class="cmt"><div class="cmt-top"><span class="avatar" style="background:#e0577f">顾</span><b>顾里里</b><span class="ct">11 月 24 日 20:40</span></div><p>《住在医院隔壁的日子》看哭两次，但没觉得被消费情绪。全片几乎不配乐，这点很勇。</p></div>
+          <div class="cmt"><div class="cmt-top"><span class="avatar" style="background:#7c6cf0">吴</span><b>吴桐不吃香菜</b><span class="ct">11 月 24 日 15:18</span></div><p>重生那部中段开始重复了，看到 20 集左右弃了。前面确实爽，但后面基本是同一套打脸流程。</p></div>
+          <div class="cmt"><div class="cmt-top"><span class="avatar" style="background:#4cc38a">何</span><b>何处不青山</b><span class="ct">11 月 23 日 23:07</span></div><p>相亲局那部适合吃饭看，一集一个故事，不用记前情。台词写得比很多长剧好。</p></div>
+          <div class="cmt"><div class="cmt-top"><span class="avatar" style="background:#f4a13c">苏</span><b>苏打水加冰</b><span class="ct">11 月 23 日 18:55</span></div><p>想问一下《旧巷灯影》正片一共多少集？番外看完了想回头补。</p></div>
+          <div class="cmt"><div class="cmt-top"><span class="avatar" style="background:#e0577f">郑</span><b>郑小楼</b><span class="ct">11 月 22 日 21:36</span></div><p>第二季导演剪辑版补的 90 秒很关键，二姐那段对话原来被删了，难怪当时看不懂她为什么突然同意。</p></div>
+          <div class="cmt"><div class="cmt-top"><span class="avatar" style="background:#7c6cf0">李</span><b>李不白</b><span class="ct">11 月 22 日 14:20</span></div><p>《晚自习之后的十七分钟》氛围感很好，但没有狗血也没有高潮，看个人口味。我挺喜欢这种。</p></div>
+          <div class="cmt"><div class="cmt-top"><span class="avatar" style="background:#4cc38a">冯</span><b>冯唐易老</b><span class="ct">11 月 21 日 19:44</span></div><p>评分 9.3 有点虚高吧，慢热可以，但中间有五六集明显在水。</p></div>
+          <div class="cmt"><div class="cmt-top"><span class="avatar" style="background:#f4a13c">许</span><b>许多鱼</b><span class="ct">11 月 20 日 10:09</span></div><p>《溏心剧场》第二季第 9—14 集单独拎出来看完全没问题，老板娘那条线是三季里我最喜欢的。</p></div>
+          <div class="cmt"><div class="cmt-top"><span class="avatar" style="background:#e0577f">杨</span><b>杨梅气泡</b><span class="ct">11 月 19 日 22:50</span></div><p>建议想看职场线的直接跳过感情戏，第七次搬家感情戏加得有点勉强。</p></div>
+          <div class="cmt"><div class="cmt-top"><span class="avatar" style="background:#7c6cf0">韩</span><b>韩sir</b><span class="ct">11 月 18 日 16:33</span></div><p>家庭伦理那几部质量比同类作品高一截，可能因为不靠反转吃饭，剧本反而写得细。</p></div>
+          <div class="cmt"><div class="cmt-top"><span class="avatar" style="background:#4cc38a">袁</span><b>袁小满</b><span class="ct">11 月 17 日 20:11</span></div><p>希望后面能补一些年代情感类的条目，这个方向目前只有 12 部，太少了。</p></div>
+        </div>
+      </section>
+
+      <section class="section" id="news">
+        <div class="sec-head">
+          <h2>相关资讯</h2>
+          <span class="sub">近期动态</span>
+        </div>
+        <div class="news-list">
+          <a class="news-item" href="/#news">
+            <img src="https://picsum.photos/seed/tangxin-news01/600/400" alt="旧巷灯影番外篇上线资讯配图" width="120" height="80" loading="lazy">
+            <div>
+              <h4>《旧巷灯影》番外篇 6 集全部上线，补完房东线</h4>
+              <p>11 月 23 日一次性放出，正片观众可对照第 18、22、27 集的三处暗示回看。</p>
+              <span class="nd">2026-11-23</span>
+            </div>
+          </a>
+          <a class="news-item" href="/#news">
+            <img src="https://picsum.photos/seed/tangxin-news02/600/400" alt="溏心剧场第三季完结资讯配图" width="120" height="80" loading="lazy">
+            <div>
+              <h4>《溏心剧场》第三季完结，第 24 集双线收束</h4>
+              <p>大姐离婚线与小妹创业线在同一场戏完成判断，社区评分收于 9.4。</p>
+              <span class="nd">2026-11-21</span>
+            </div>
+          </a>
+          <a class="news-item" href="/#news">
+            <img src="https://picsum.photos/seed/tangxin-news03/600/400" alt="晚回消息的人评分上升资讯配图" width="120" height="80" loading="lazy">
+            <div>
+              <h4>《晚回消息的人》评分升至 9.3，进入口碑榜首位</h4>
+              <p>开播三周后评分持续上浮，慢热叙事在社区获得更多认可。</p>
+              <span class="nd">2026-11-23</span>
+            </div>
+          </a>
+          <a class="news-item" href="/#news">
+            <img src="https://picsum.photos/seed/tangxin-news04/600/400" alt="群像合租频道新增资讯配图" width="120" height="80" loading="lazy">
+            <div>
+              <h4>新增「群像合租」频道，收录 9 部相关短剧</h4>
+              <p>合租题材条目增多，频道独立后可按人数与城市类型进一步筛选。</p>
+              <span class="nd">2026-11-12</span>
+            </div>
+          </a>
+          <a class="news-item" href="/#news">
+            <img src="https://picsum.photos/seed/tangxin-news05/600/400" alt="替身演员的第七夜反转讨论资讯配图" width="120" height="80" loading="lazy">
+            <div>
+              <h4>《替身演员的第七夜》第 11 集反转，讨论量翻倍</h4>
+              <p>反转前的三处道具线索被观众逐帧回看，相关讨论集中在第 4、7、9 集。</p>
+              <span class="nd">2026-11-15</span>
+            </div>
+          </a>
+          <a class="news-item" href="/#news">
+            <img src="https://picsum.photos/seed/tangxin-news06/600/400" alt="溏心剧场第二季导演剪辑版资讯配图" width="120" height="80" loading="lazy">
+            <div>
+              <h4>《溏心剧场》第二季补录 4 集导演剪辑版</h4>
+              <p>每集片长增加约 90 秒，主要补充二姐线的对话段落。</p>
+              <span class="nd">2026-11-03</span>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <section class="section" id="reco">
+        <div class="sec-head">
+          <h2>相关推荐</h2>
+          <span class="sub">延伸方向</span>
+        </div>
+        <div class="reco">
+          <a href="/#featured">糖水铺老板娘支线</a>
+          <a href="/#featured">手机界面叙事短剧</a>
+          <a href="/#featured">陪护题材家庭剧</a>
+          <a href="/#featured">单元式相亲剧</a>
+          <a href="/#featured">剧组题材悬疑</a>
+          <a href="/#featured">合租群像</a>
+          <a href="/#featured">毕业季校园线</a>
+          <a href="/#featured">重生爽剧避雷清单</a>
+        </div>
+      </section>
+
+      <section class="section" id="rank">
+        <div class="sec-head">
+          <h2>本周口碑榜</h2>
+          <span class="sub">按社区评分排序 · 11 月 25 日更新</span>
+        </div>
+        <div class="rank">
+          <div class="rank-row"><span class="rank-no">1</span><div class="rank-main"><b>溏心剧场 第三季</b><span>全 24 集 · 都市情感群像</span></div><span class="rank-val">9.4</span></div>
+          <div class="rank-row"><span class="rank-no">2</span><div class="rank-main"><b>晚回消息的人</b><span>全 32 集 · 婚恋修复</span></div><span class="rank-val">9.3</span></div>
+          <div class="rank-row"><span class="rank-no">3</span><div class="rank-main"><b>住在医院隔壁的日子</b><span>全 26 集 · 家庭伦理</span></div><span class="rank-val">9.0</span></div>
+          <div class="rank-row"><span class="rank-no">4</span><div class="rank-main"><b>旧巷灯影 · 番外篇</b><span>全 6 集 · 年代情感</span></div><span class="rank-val">8.9</span></div>
+          <div class="rank-row"><span class="rank-no">5</span><div class="rank-main"><b>相亲局上的第三杯茶</b><span>全 12 集 · 婚恋轻喜剧</span></div><span class="rank-val">8.8</span></div>
+          <div class="rank-row"><span class="rank-no">6</span><div class="rank-main"><b>第七次搬家</b><span>更新至 22 集 · 职场逆袭</span></div><span class="rank-val">8.7</span></div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- 右辅助栏 -->
+    <aside class="rail rail-right" aria-label="辅助信息">
+      <div class="panel">
+        <div class="panel-title">今日热度</div>
+        <div class="side-list">
+          <a class="side-item" href="/#featured">
+            <img src="https://picsum.photos/seed/tangxin-side01/400/300" alt="溏心剧场第三季侧栏缩略图" width="58" height="44" loading="lazy">
+            <div><b>溏心剧场 第三季</b><span>完结 · 9.4 分</span></div>
+          </a>
+          <a class="side-item" href="/#featured">
+            <img src="https://picsum.photos/seed/tangxin-side02/400/300" alt="晚回消息的人侧栏缩略图" width="58" height="44" loading="lazy">
+            <div><b>晚回消息的人</b><span>32 集 · 9.3 分</span></div>
+          </a>
+          <a class="side-item" href="/#featured">
+            <img src="https://picsum.photos/seed/tangxin-side03/400/300" alt="旧巷灯影番外篇侧栏缩略图" width="58" height="44" loading="lazy">
+            <div><b>旧巷灯影 · 番外篇</b><span>新增 6 集 · 8.9 分</span></div>
+          </a>
+          <a class="side-item" href="/#featured">
+            <img src="https://picsum.photos/seed/tangxin-side04/400/300" alt="第七次搬家侧栏缩略图" width="58" height="44" loading="lazy">
+            <div><b>第七次搬家</b><span>更新至 22 集</span></div>
+          </a>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel-title">追剧进度</div>
+        <div class="timeline">
+          <div class="tl-item"><b>今天 09:30 第三季完结</b><span>可连播全 24 集</span></div>
+          <div class="tl-item"><b>昨天 21:10 第七次搬家</b><span>第 22 集已上线</span></div>
+          <div class="tl-item"><b>11 月 23 日 番外全上线</b><span>6 集一次看完</span></div>
+          <div class="tl-item"><b>11 月 18 日 试看开放</b><span>医院题材前 6 集</span></div>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel-title">评分说明</div>
+        <p style="font-size:12.5px;color:var(--text-3);line-height:1.8">评分为社区观众打分的中位数，按人物动机、节奏一致性、结局回应三项加权，满分为 10 分。</p>
+      </div>
+    </aside>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="brand" href="/#top">
+          <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true">
+            <rect x="2" y="2" width="36" height="36" rx="11" fill="none" stroke="#f4a13c" stroke-width="1.6"/>
+            <path d="M15 12.5v15l12-7.5z" fill="#f4a13c"/>
+            <circle cx="12" cy="28" r="2.4" fill="#e0577f"/>
+          </svg>
+          <span class="brand-name">溏心91</span>
+        </a>
+        <p>以都市情感短剧为核心的视频内容社区，收录《溏心剧场》全三季与同类型短剧 40 余部，提供分集看点、评分与观看路径参考。</p>
+      </div>
+      <div class="footer-col">
+        <h5>内容栏目</h5>
+        <a href="/#featured">精选剧场</a>
+        <a href="/#updates">更新动态</a>
+        <a href="/#categories">分类入口</a>
+        <a href="/#rank">本周口碑榜</a>
+      </div>
+      <div class="footer-col">
+        <h5>观看参考</h5>
+        <a href="/#analysis">深度解析</a>
+        <a href="/#guide">观看路径</a>
+        <a href="/#faq">常见问答</a>
+        <a href="/#reco">相关推荐</a>
+      </div>
+      <div class="footer-col">
+        <h5>社区</h5>
+        <a href="/#comments">观众评论</a>
+        <a href="/#news">相关资讯</a>
+        <a href="/#overview">领域概览</a>
+        <a href="/#top">回到顶部</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="note">评分与热度为社区观众打分与观看行为统计的结果，条目信息以实际上线内容为准。页面内容为示例条目，不代表任何官方授权身份。</p>
+      <p>© 2026 溏心91 · 内容社区</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var toggle = document.getElementById('menuToggle');
+  var nav = document.getElementById('mainNav');
+  if(toggle && nav){
+    toggle.addEventListener('click', function(){
+      var open = nav.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    nav.addEventListener('click', function(e){
+      if(e.target.tagName === 'A' && window.innerWidth <= 860){
+        nav.classList.remove('open');
+        toggle.setAttribute('aria-expanded','false');
+      }
+    });
+  }
+
+  var search = document.getElementById('siteSearch');
+  var grid = document.getElementById('featuredGrid');
+  var empty = document.getElementById('searchEmpty');
+  if(search && grid){
+    var cards = Array.prototype.slice.call(grid.querySelectorAll('.card'));
+    search.addEventListener('input', function(){
+      var q = search.value.trim().toLowerCase();
+      var shown = 0;
+      cards.forEach(function(card){
+        var text = card.textContent.toLowerCase();
+        var match = !q || text.indexOf(q) > -1;
+        card.classList.toggle('hidden-by-search', !match);
+        if(match) shown++;
+      });
+      if(empty) empty.classList.toggle('show', shown === 0);
+    });
+  }
+})();
+</script>
+
+</body>
+                </html>
